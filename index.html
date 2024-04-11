@@ -1,5 +1,5 @@
 <!-- author lchouvil -->
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -9,10 +9,21 @@
         <title>GraphQL</title>
     </head>
     <body id="body">
-
+        <header class="banner-container" id="banner-container">
+            <h1>GraphQL</h1>
+            <div id="logForm" class="logForm">
+                <input id="username" type="text"  placeholder="pseudo/email" required maxlength="255"/>
+                <input id="password" type="password"   placeholder="password" required maxlength="255"/>
+                <button id="logSubmit" class="btn">Connect</button>
+            <div>
+        </header>
+        <div id="page-container" class="page-container">
+            <h2>Welcome on my GraphQL Project</h2>
+            <p>Please Connect you with your Z01 Credential to see your graph</p>
+        </div>
+        <footer id="footer">
+            <p>Copyright &copy; 2024 luka Chouville</p>
+        </footer>
     </body>
-    <footer id="footer">
-        <p>Copyright &copy; 2021 luka Chouville</p>
-    </footer>
     <script type="module" src="/components/js/main.js"></script>
 </html>

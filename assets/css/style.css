@@ -1,0 +1,228 @@
+/* Global (mobile first)*/
+html{
+    height: 100%;
+}
+body {
+    /* position */
+    /* dimention */
+    width: 100%;
+    height: 100%;
+    /* behavior */
+    margin:0;
+    /* visual*/
+    background-color: azure;
+}
+/*
+    Banner 
+*/
+.banner-container {
+    /* position */
+    /* dimention */
+    width: 100%;
+    height: 10%;
+    /* behavior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-container h1 {
+    /* position */
+    /* dimention */
+    /* behavior */
+    margin-left: 1%;
+    /* visual */
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+.logForm{
+    /* position */
+    /* dimention */
+    width: fit-content;
+    height: 98%;
+    /* behavior */
+    margin-right: 1%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-between;
+    
+    /* visual*/
+}
+.logForm button{
+    /* position */
+    order: 0;
+    /* dimention */
+    height: 100%;
+    /* behavior */
+    margin-left: 5px;
+    /* visual*/
+    background-color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logForm button:hover{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    background-color: rgb(203, 212, 212);
+}
+.logForm input{
+    /* position */
+    /* dimention */
+    height:40%;
+    width: 100%;
+    max-width: 10rem;
+    /* behavior */
+    /* visual*/
+    border-radius: 5px;
+}
+
+/*
+    Main Content
+*/
+.page-container{
+    /* position */
+    order:0;
+    /* dimention */
+    width: 91%;
+    height: 85%;
+    max-height: 85%;
+
+    padding: 0% 2% 0% 2%;
+    /* behavior */
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-y: auto;
+    /* visual*/
+    background-color: gainsboro;
+}
+
+/*
+    Footer
+*/
+footer{
+    /* position */
+    order:1;
+    /* dimention */
+    width: 100%;
+    height: 5%;
+    /* behavior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* visual*/
+    background-color: rgba(44, 44, 44, 0.775);
+    color: rgb(142, 142, 142);
+}
+
+/* Mobile (only mobile)*/
+@media(max-width:480px) {
+    /* CSS */
+    .banner-container{
+        /* position */
+        /* dimention */
+        height: 15%;
+        /* behavior */
+        /* visual*/
+        background-color: blue;
+    }
+    .logForm input{
+        /* position */
+        /* dimention */
+        max-width: 8rem;
+        /* behavior */
+        /* visual*/
+        font-size: 100%;
+    }
+    .logForm p{
+        /* position */
+        /* dimention */
+        height: 50%;
+        /* behavior */
+        margin: 0;
+        margin-top: 25%;
+        /* visual*/
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .page-container{
+        /* position */
+        /* dimention */
+        height: 80%;
+        /* behavior */
+        /* visual*/
+
+    }
+}
+
+/* Extra Small Devices */
+@media(min-width:481px) and (max-width:767px) {
+    /* CSS */
+    .banner-container{
+        /* position */
+        /* dimention */
+        /* behavior */
+        /* visual*/
+        background-color: orange;
+    }
+}
+
+/* Small Tablets */
+@media(min-width:768px) and (max-width:991px) {
+    /* CSS */
+    .banner-container{
+        /* position */
+        /* dimention */
+        /* behavior */
+        /* visual*/
+        background-color: yellow;
+    }
+}
+
+/* Large Tablets/Laptops */
+@media(min-width:992px) and (max-width:1199px) {
+    /* CSS */
+    .banner-container{
+        /* position */
+        /* dimention */
+        /* behavior */
+        /* visual*/
+        background-color: purple;
+    }
+}
+
+/* Desktops */
+@media(min-width:1200px) and (max-width:1919px) {
+    /* CSS */
+    .banner-container{
+        /* position */
+        /* dimention */
+        /* behavior */
+        /* visual*/
+        background-color: red;
+    }
+}
+
+/* Extra Large Screen */
+@media(min-width:1920px){
+    /* CSS */
+    .banner-container{
+        /* position */
+        /* dimention */
+        /* behavior */
+        /* visual*/
+        background-color: green;
+    }
+}
