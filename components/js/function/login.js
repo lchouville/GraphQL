@@ -14,8 +14,9 @@ export async function logSubmit(){
         });
         switch (response.status){
             case 200: // Success
+                const token = await response.json();
                 // store the connection token
-                localStorage.setItem("token", response.headers.get("token"));
+                localStorage.setItem("token", token);
                 connected()
             break;
             case 403: // Invalid credentials
