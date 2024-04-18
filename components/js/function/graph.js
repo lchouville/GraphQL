@@ -1,9 +1,7 @@
 import { urlGraph } from "../const/const.js";
+import { loadMainContent } from "../interface/mainGraph.js";
 
 export async function fetchData() {
-    const mainpage = document.getElementById('page-container');
-    const username = document.getElementById('pseudo');
-
     // Construct the GraphQL query
     const query = `
     query {
@@ -47,9 +45,8 @@ export async function fetchData() {
         switch (response.status) {
             case 200: // Success
                 const data = await response.json(); // Parse the response JSON
-                const userId = data.data.user[0].login; // Extract the user login
-                mainpage.innerHTML = ""; // Clear the mainpage content
-                username.innerText = "Connected as:\n" + userId; // Display the user ID
+                console.log(data)
+                loadMainContent(data)
                 break;
             default: // Other errors
                 console.log("Something went wrong on access attempt");

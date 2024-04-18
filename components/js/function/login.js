@@ -5,6 +5,7 @@ export async function logSubmit(){
     // Get The Credentials
     const username = document.getElementById("username");
     const password = document.getElementById("password");
+    
     const headers = new Headers();
     headers.append("Authorization", "Basic " + btoa(username.value + ":" + password.value))
     try {
@@ -48,8 +49,8 @@ export function connected(){
     // remove the form
     username.remove()
     password.remove()
-    const button = document.getElementById("logSubmit");
-    button.innerText = "Disconnect";
+    const button = document.getElementById('logSubmit')
+    button.className = 'btn btn-unlog';button.innerText = "Disconnect";
     button.onclick = dlog;
     fetchData();
 }

@@ -1,4 +1,7 @@
 /* Global (mobile first)*/
+*{
+    font-family: "Tomorrow", sans-serif;
+}
 html{
     height: 100%;
 }
@@ -10,7 +13,7 @@ body {
     /* behavior */
     margin:0;
     /* visual*/
-    background-color: azure;
+    background-color: rgb(52, 52, 52);
 }
 /*
     Banner 
@@ -24,13 +27,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* visual */
+    background-color: rgb(45, 45, 69);
+
 }
 .banner-container h1 {
     /* position */
     /* dimention */
     /* behavior */
-    margin-left: 1%;
+    margin-left: 5%;
     /* visual */
+    font-family: "Wallpoet", sans-serif;
+    fill: rgb(112, 112, 161);
+    font-weight: bold;
+    filter: drop-shadow(0 0 5px rgb(186, 186, 219));
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -42,7 +52,7 @@ body {
     width: fit-content;
     height: 98%;
     /* behavior */
-    margin-right: 1%;
+    margin-right: 3%;
 
     display: flex;
     flex-direction: column;
@@ -56,30 +66,66 @@ body {
     /* position */
     order: 0;
     /* dimention */
-    height: 100%;
+    height: 30%;
+    width: 100%;
     /* behavior */
-    margin-left: 5px;
     /* visual*/
-    background-color: azure;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
 }
-.logForm button:hover{
+.btn-log{
     /* position */
     /* dimention */
     /* behavior */
     /* visual*/
-    background-color: rgb(203, 212, 212);
+    color: rgb(14, 61, 17);
+    background-color: rgb(25, 163, 73);
+}
+.btn-log:hover{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    background-color: rgb(10, 117, 48);
+}
+.btn-unlog {
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    color: rgb(61, 14, 14);
+    background-color: rgb(163, 25, 25);
+}
+.btn-unlog:hover{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    background-color: rgb(117, 10, 10);
 }
 .logForm input{
     /* position */
     /* dimention */
-    height:40%;
+    height:25%;
     width: 100%;
     max-width: 10rem;
     /* behavior */
     /* visual*/
     border-radius: 5px;
+}
+.logForm p{
+    /* position */
+    /* dimention */
+    height: 50%;
+    /* behavior */
+    margin: 0;
+    margin-top: 10%;
+    /* visual*/
+    color: rgb(108, 121, 132);
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 /*
@@ -105,9 +151,28 @@ body {
 
     overflow-y: auto;
     /* visual*/
-    background-color: gainsboro;
+    background-color: rgb(79, 79, 79);
 }
-
+.audit-container{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    color: rgb(99, 99, 99) ;
+    background-color: rgb(41, 41, 41);
+    border: rgb(99, 99, 99) solid 2px;
+    border-radius: 5px;
+}
+.audit-container h4{
+    /* position */
+    /* dimention */
+    /* behavior */
+    margin: 0;
+    /* visual*/
+    color: rgb(121, 121, 121) ;
+    font-size: 1.2rem;
+    text-align: center;
+}
 /*
     Footer
 */
@@ -136,7 +201,22 @@ footer{
         height: 15%;
         /* behavior */
         /* visual*/
-        background-color: blue;
+    }
+    .logForm{
+        /* position */
+        /* dimention */
+        width: fit-content;
+        height: 98%;
+        /* behavior */
+        margin-right: 5%;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        justify-content: space-between;
+        
+        /* visual*/
     }
     .logForm input{
         /* position */
@@ -145,17 +225,6 @@ footer{
         /* behavior */
         /* visual*/
         font-size: 100%;
-    }
-    .logForm p{
-        /* position */
-        /* dimention */
-        height: 50%;
-        /* behavior */
-        margin: 0;
-        margin-top: 25%;
-        /* visual*/
-        font-size: 1.2rem;
-        text-align: center;
     }
     .page-container{
         /* position */
