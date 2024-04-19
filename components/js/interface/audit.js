@@ -77,19 +77,7 @@ function auditGraph(value1, value2, ratio) {
     ratiotxt.textContent = ratio;
     // Make the text bold
     ratiotxt.setAttribute("font-weight", "bold");
-    switch (true) {
-        case (ratio > 1.5):
-            ratiotxt.setAttribute("fill", "green");
-            break;
-        case (ratio < 0.5):
-            ratiotxt.setAttribute("fill", "red");
-            break;
-        default:
-            ratiotxt.setAttribute("fill", "orange");
-            break;
-    }
     
-    svg.appendChild(ratiotxt);
     // Add the ratio value in the center of the circle
     const messagetxt = document.createElementNS("http://www.w3.org/2000/svg", "text");
     messagetxt.setAttribute("x", circleX + circleRadius + 10); // Adjusted X position for the label
@@ -97,21 +85,25 @@ function auditGraph(value1, value2, ratio) {
     // set the text size
     messagetxt.setAttribute("font-size", "12px");
     messagetxt.setAttribute("font-style", "italic");
+    // apply color to text ratio
     switch (true) {
         case (ratio > 1.2):
+            ratiotxt.setAttribute("fill", "green");
             messagetxt.setAttribute("fill", "green");
             messagetxt.textContent = "Almost perfect!";
             break;
         case (ratio < 1):
+            ratiotxt.setAttribute("fill", "red");
             messagetxt.setAttribute("fill", "red");
             messagetxt.textContent = "Make more audit!";
             break;
         default:
+            ratiotxt.setAttribute("fill", "orange");
             messagetxt.setAttribute("fill", "orange");
             messagetxt.textContent = "You can do better!";
             break;
     }
-    
+    svg.appendChild(ratiotxt);
     svg.appendChild(messagetxt);
     // Add label for value1
     const textValue1 = document.createElementNS("http://www.w3.org/2000/svg", "text");

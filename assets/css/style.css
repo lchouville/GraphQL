@@ -150,8 +150,30 @@ body {
     justify-content: flex-start;
 
     overflow-y: auto;
+    gap: 5%;
     /* visual*/
     background-color: rgb(79, 79, 79);
+}
+.panel-default{
+    /* position */
+    /* dimention */
+    height: fit-content;
+    width: 85%;
+    /* behavior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* visual*/
+}
+.panel-default h4{
+    /* position */
+    /* dimention */
+    /* behavior */
+    margin: 0;
+    /* visual*/
+    font-size: 1.2rem;
+    text-align: center;
 }
 .audit-container{
     /* position */
@@ -167,11 +189,33 @@ body {
     /* position */
     /* dimention */
     /* behavior */
-    margin: 0;
     /* visual*/
     color: rgb(121, 121, 121) ;
-    font-size: 1.2rem;
-    text-align: center;
+}
+.skills-container{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    color: rgb(40, 40, 40) ;
+    background-color: rgb(99, 99, 99);
+    border: rgb(40, 40, 40)  solid 2px;
+    border-radius: 5px;
+}
+.skills-container h4{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    color: rgb(48, 48, 48) ;
+}
+.skills-container svg{
+    /* position */
+    /* dimention */
+    /* behavior */
+    /* visual*/
+    background-color: rgb(63, 63, 63);
+    border-radius: 360px;
 }
 /*
     Footer
