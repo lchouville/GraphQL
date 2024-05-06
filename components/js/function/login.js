@@ -22,13 +22,21 @@ export async function logSubmit(){
             break;
             case 403: // Invalid credentials
                 console.log("Invalid credentials")
+                alert("Invalid credentials. Please check your username and password.");    
+            break;
+            case 401: // Invalid credentials
+                console.log("Invalid credentials")
+                alert("Invalid credentials. Please check your username and password.");    
             break;
             default: // other errors
                 console.log("somthing gone wrong on connection tentative");
+                alert("Something went wrong on connection attempt. Please try again later.");
+            
             break; 
         }
     } catch (e) {
         console.error(e);
+        alert("An unexpected error occurred. Please try again later.");
     }
     
 } 
