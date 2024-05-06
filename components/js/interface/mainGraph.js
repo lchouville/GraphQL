@@ -11,6 +11,9 @@ export function loadMainContent(_data){
     mainpage.innerHTML = "";
 
     // Create elements for displaying data
+    const userInfo = document.createElement('div');
+    userInfo.id = 'user-info';
+    userInfo.className = 'user-info';
     const user = document.createElement('h3')
     user.id = 'user';
     user.className = 'user-profil';
@@ -42,9 +45,10 @@ export function loadMainContent(_data){
     xp.innerText = "XP : "+ formatNumberWithSuffix(xpGlobal,0)
     
     // add elements to the page
-    mainpage.appendChild(user);
-    mainpage.appendChild(level);
-    mainpage.appendChild(xp);
+    userInfo.appendChild(user);
+    userInfo.appendChild(level);
+    userInfo.appendChild(xp);
+    mainpage.appendChild(userInfo);
     mainpage.appendChild(auditpanel(transaction));
     mainpage.appendChild(skillspanel(transaction));
 }

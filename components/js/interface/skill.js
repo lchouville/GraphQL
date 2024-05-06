@@ -119,12 +119,12 @@ function skillsGraph(objects){
         let rotationAngle = labelAngle + Math.PI / 2; // Rotate by 90 degrees to make text parallel to the center
 
         
-
-        const labelRadius = radius + 20; // Adjust this to position the label outside the circle
-
         // Calculate coordinates for label
         const labelX = svgWidth / 2 + 110 * Math.cos(labelAngle * Math.PI / 180);
         const labelY = svgHeight / 2 + 110 * Math.sin(labelAngle * Math.PI / 180);
+        // Calculate coordinates for value
+        const valueX = svgWidth / 2 + 140 * Math.cos(labelAngle * Math.PI / 180);
+        const valueY = svgHeight / 2 + 140 * Math.sin(labelAngle * Math.PI / 180);
         
         // Create text element for label
         const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -137,6 +137,19 @@ function skillsGraph(objects){
         label.setAttribute("stroke-width", "0.9px");
         label.textContent = typeWithoutPrefix; // Set label text to typeWithoutPrefix
         
+        // Create text element for label
+        const value = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        value.setAttribute("x", valueX);
+        value.setAttribute("y", valueY);
+        value.setAttribute("text-anchor", "middle");
+        value.setAttribute("alignment-baseline", "middle");
+        value.setAttribute("font-weight", "bold");
+        value.setAttribute("font-size", "14px");
+        value.setAttribute("stroke-width", "0.9px");
+        value.setAttribute("fill", "rgb(0, 125, 185)");
+        value.setAttribute("stroke", "rgb(10, 10, 10)");
+        value.textContent = amount+"%"; // Set label text to typeWithoutPrefix
+
         if (i<5 && i>0){
             rotationAngle -=90
             label.setAttribute("writing-mode", "");
@@ -145,6 +158,7 @@ function skillsGraph(objects){
         }
         
         label.setAttribute("transform", `rotate(${rotationAngle}, ${labelX}, ${labelY})`); // Rotate the text
+        value.setAttribute("transform", `rotate(${rotationAngle}, ${valueX}, ${valueY})`); // Rotate the text
         
         // Set stroke and fill colors based on segment index
         if (i % 2 == 0) {
@@ -162,6 +176,7 @@ function skillsGraph(objects){
         // Append path to SVG
         svg.appendChild(path);
         svg.appendChild(label);
+        svg.appendChild(value);
 
         // Update start angle for next segment
         startAngle = endAngle;

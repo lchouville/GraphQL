@@ -118,10 +118,9 @@ body {
 .logForm p{
     /* position */
     /* dimention */
-    height: 50%;
+    height: 60%;
     /* behavior */
     margin: 0;
-    margin-top: 10%;
     /* visual*/
     color: rgb(108, 121, 132);
     font-size: 1.2rem;
@@ -154,11 +153,19 @@ body {
     /* visual*/
     background-color: rgb(79, 79, 79);
 }
-.panel-default{
+.user-info{
     /* position */
     /* dimention */
     height: fit-content;
     width: 85%;
+    /* behavior */
+    /* visual*/
+}
+.panel-default{
+    /* position */
+    /* dimention */
+    height: fit-content;
+    width: fit-content;
     /* behavior */
     display: flex;
     flex-direction: column;
@@ -238,7 +245,6 @@ footer{
 
 /* Mobile (only mobile)*/
 @media(max-width:480px) {
-    /* CSS */
     .banner-container{
         /* position */
         /* dimention */
@@ -262,6 +268,14 @@ footer{
         
         /* visual*/
     }
+    .logForm p{
+        /* position */
+        /* dimention */
+        height: 50%;
+        /* behavior */
+        margin-top: 10%;
+        /* visual*/
+    }
     .logForm input{
         /* position */
         /* dimention */
@@ -282,60 +296,204 @@ footer{
 
 /* Extra Small Devices */
 @media(min-width:481px) and (max-width:767px) {
-    /* CSS */
     .banner-container{
         /* position */
         /* dimention */
+        height: 12.5%;
         /* behavior */
         /* visual*/
-        background-color: orange;
+    }
+    .logForm{
+        /* position */
+        /* dimention */
+        width: fit-content;
+        height: 98%;
+        /* behavior */
+        margin-right: 5%;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-end;
+        justify-content: space-between;
+        
+        /* visual*/
+    }
+    .logForm p{
+        /* position */
+        /* dimention */
+        height: 50%;
+        /* behavior */
+        margin-top: 10%;
+        /* visual*/
+    }
+    .logForm input{
+        /* position */
+        /* dimention */
+        max-width: 8rem;
+        /* behavior */
+        /* visual*/
+        font-size: 100%;
     }
 }
 
 /* Small Tablets */
 @media(min-width:768px) and (max-width:991px) {
-    /* CSS */
-    .banner-container{
+    .page-container{
         /* position */
         /* dimention */
         /* behavior */
+        flex-direction:row;
+        flex-wrap: wrap;
+        gap: 0%;
         /* visual*/
-        background-color: yellow;
+
+    }
+    .panel-default{
+        /* position */
+        /* dimention */
+        width:fit-content;
+        /* behavior */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* visual*/
+    }
+    .user-info{
+        /* position */
+        /* dimention */
+        width: 48%;
+        /* behavior */
+        /* visual*/
+    }
+    .audit-container{
+        /* position */
+        /* dimention */
+        width: 50%;
+        /* behavior */
+        /* visual*/
     }
 }
 
 /* Large Tablets/Laptops */
 @media(min-width:992px) and (max-width:1199px) {
-    /* CSS */
-    .banner-container{
+    
+    .page-container{
         /* position */
         /* dimention */
         /* behavior */
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: normal;
+        gap: 5%;
         /* visual*/
-        background-color: purple;
+
+    }
+    .panel-default{
+        /* position */
+        /* dimention */
+        width:fit-content;
+        /* behavior */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* visual*/
+    }
+    .user-info{
+        /* position */
+        /* dimention */
+        width: 85%;
+        /* behavior */
+        /* visual*/
+    }
+    .audit-container{
+        /* position */
+        /* dimention */
+        width: 50%;
+        /* behavior */
+        /* visual*/
     }
 }
 
 /* Desktops */
-@media(min-width:1200px) and (max-width:1919px) {
-    /* CSS */
-    .banner-container{
+@media(min-width:1200px) and (max-width:1919px) {  
+    .page-container{
         /* position */
         /* dimention */
         /* behavior */
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: normal;
+        gap: 5%;
         /* visual*/
-        background-color: red;
+
+    }
+    .panel-default{
+        /* position */
+        /* dimention */
+        width:fit-content;
+        /* behavior */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* visual*/
+    }
+    .user-info{
+        /* position */
+        /* dimention */
+        width: 85%;
+        /* behavior */
+        /* visual*/
+    }
+    .audit-container{
+        /* position */
+        /* dimention */
+        width: 50%;
+        /* behavior */
+        /* visual*/
     }
 }
 
 /* Extra Large Screen */
 @media(min-width:1920px){
-    /* CSS */
-    .banner-container{
+    
+    .page-container{
         /* position */
         /* dimention */
         /* behavior */
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: normal;
+        gap: 5%;
         /* visual*/
-        background-color: green;
+
+    }
+    .panel-default{
+        /* position */
+        /* dimention */
+        width:fit-content;
+        /* behavior */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        /* visual*/
+    }
+    .user-info{
+        /* position */
+        /* dimention */
+        width: 85%;
+        /* behavior */
+        /* visual*/
+    }
+    .audit-container{
+        /* position */
+        /* dimention */
+        width: 50%;
+        /* behavior */
+        /* visual*/
     }
 }
