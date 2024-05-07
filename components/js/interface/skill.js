@@ -7,7 +7,7 @@ export function skillspanel(_transaction){
     // Filter objects with type starting with "skill-"
     let skillObjects = _transaction.filter(_transaction => _transaction.type.startsWith("skill_"));
     skillObjects = filterLastOc(skillObjects);
-    skillObjects = filter10BestOc(skillObjects);
+    skillObjects = filter6HighestAmount(skillObjects);
     
     // Sort the skillObjects array by type in ascending order
     skillObjects.sort((a, b) => {
@@ -42,25 +42,12 @@ function filterLastOc(objects) {
 
     return lastOccurrenceArray;
 }
-function filter10BestOc(objects) {
-    let Best10Oc = []
-    // loop on objects to find the 10 best occurrences
-    for (let i = 0; i < objects.length; i++) {
-        const object = objects[i];
-        if (Best10Oc.length<6){
-            // push the object to the list
-            Best10Oc.push(object);
-        }else{
-            for (let j = 0; j < Best10Oc.length; j++) {
-                if (Best10Oc[j].amount< object.amount) {
-                    Best10Oc[j] = object
-                    break;
-                }
-            }
-        }
-    }
-
-    return Best10Oc
+function filter6HighestAmount(objects) {
+    // Sort the objects by 'amount' property in descending order
+    objects.sort((a, b) => b.amount - a.amount);
+    
+    // Take the first 6 elements
+    return objects.slice(0, 6);
 }
 function skillsGraph(objects){
     // Elements properties
