@@ -17,6 +17,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.GH_TOKEN }}
-          branch: main  # Change the branch to main
-          folder: .     # Use the root directory for deployment
-          clean: true   # Optional: This removes existing files in the main branch before deploying
+          branch: gh-pages
+          folder: .
+          clean: true  # Optional: This removes existing files in the gh-pages branch before deploying
