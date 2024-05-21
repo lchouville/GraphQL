@@ -16,7 +16,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          ACCESS_TOKEN: ${{ secrets.GH_TOKEN}}
-          BRANCH: gh-pages
-          FOLDER: .
-          CLEAN: true  # Optional: This removes existing files in the gh-pages branch before deploying
+          token: ${{ secrets.GH_TOKEN }}
+          branch: gh-pages
+          folder: .
+          clean: true  # Optional: This removes existing files in the gh-pages branch before deploying
