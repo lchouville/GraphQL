@@ -1,32 +1,22 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # or the branch you want to trigger the workflow on
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout the repository
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build  # Adjust this command according to your build process
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: .  # Adjust this if your built files are in a different directory
+          FOLDER: .
+          CLEAN: true  # Optional: This removes existing files in the gh-pages branch before deploying
