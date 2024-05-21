@@ -10,4 +10,4 @@
 
 ## Authors
 
-- lchouvil [[Gitea]](https://zone01normandie.org/git/lchouvil) [[Git]](https://github.com/lchouville)
+- lchouvil [[Gitea]-(private)](https://zone01normandie.org/git/lchouvil) [[Git]](https://github.com/lchouville)
