@@ -13,22 +13,12 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Set up Ruby and Jekyll
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0'
-      - name: Install Jekyll and dependencies
-        run: |
-          gem install bundler
-          bundle install
-
-      - name: Build the Jekyll site
-        run: bundle exec jekyll build
+      # Add any necessary steps for building your static website here
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: gh-pages
-          folder: ./_site
+          folder: .  # Set the folder to deploy (root directory in this case)
           clean: true
