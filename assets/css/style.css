@@ -152,6 +152,18 @@ body {
     /* visual*/
     background-color: rgb(79, 79, 79);
 }
+.title{
+    /* position */
+    /* dimention */
+    height: fit-content;
+    width: 100%;
+    /* behavior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* visual*/
+}
 .user-info{
     /* position */
     /* dimention */
