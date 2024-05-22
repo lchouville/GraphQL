@@ -13,21 +13,22 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Ruby and Jekyll
+        uses: ruby/setup-ruby@v1
         with:
-          node-version: '14'
+          ruby-version: '3.0'
+      - name: Install Jekyll and dependencies
+        run: |
+          gem install bundler
+          bundle install
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build
+      - name: Build the Jekyll site
+        run: bundle exec jekyll build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: gh-pages
-          folder: .
+          folder: ./_site
           clean: true
