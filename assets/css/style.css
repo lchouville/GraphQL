@@ -378,15 +378,13 @@ footer{
 
 /* Large Tablets/Laptops */
 @media(min-width:992px) and (max-width:1199px) {
-    
     .page-container{
         /* position */
         /* dimention */
         /* behavior */
-        flex-direction:column;
+        flex-direction:row;
         flex-wrap: wrap;
-        align-items: normal;
-        gap: 5%;
+        gap: 0%;
         /* visual*/
 
     }
@@ -404,7 +402,7 @@ footer{
     .user-info{
         /* position */
         /* dimention */
-        width: 85%;
+        width: 48%;
         /* behavior */
         /* visual*/
     }
@@ -423,10 +421,9 @@ footer{
         /* position */
         /* dimention */
         /* behavior */
-        flex-direction:column;
+        flex-direction:row;
         flex-wrap: wrap;
-        align-items: normal;
-        gap: 5%;
+        gap: 0%;
         /* visual*/
 
     }
@@ -444,7 +441,7 @@ footer{
     .user-info{
         /* position */
         /* dimention */
-        width: 85%;
+        width: 48%;
         /* behavior */
         /* visual*/
     }
@@ -459,15 +456,13 @@ footer{
 
 /* Extra Large Screen */
 @media(min-width:1920px){
-    
     .page-container{
         /* position */
         /* dimention */
         /* behavior */
-        flex-direction:column;
+        flex-direction:row;
         flex-wrap: wrap;
-        align-items: normal;
-        gap: 5%;
+        gap: 0%;
         /* visual*/
 
     }
@@ -485,7 +480,7 @@ footer{
     .user-info{
         /* position */
         /* dimention */
-        width: 85%;
+        width: 48%;
         /* behavior */
         /* visual*/
     }
