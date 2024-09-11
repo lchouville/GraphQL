@@ -10,7 +10,7 @@ the purpose of this project is to create an web application to access and show Z
 ## Authors
 
 - lchouvil [[Gitea]-(private)](https://zone01normandie.org/git/lchouvil) [[Git]](https://github.com/lchouville)
-- 
+
 # GraphQL - fr
 
 ## Description
